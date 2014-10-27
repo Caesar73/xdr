@@ -89,5 +89,9 @@ if(file_exists($myf_file)){
 	//执行后置方法
 	$myf_c->_after_index();
 }else{
-   echo "error 404";
+   //echo "error 404";
+        // $abc = json_encode($_SERVER);
+        // Log::write("NoPage log infos=".$abc);
+    header("Location:".getBaseURL()."/static/home");
+    //header("Location:http://xdr.com:8888/static/home");
 }

@@ -6,10 +6,6 @@ class StaticAction extends Action {
         $this -> display('login.html');
     }
 
-    public function index () {
-        $this -> display('home.html');
-    }
-
     public function loginAjax () {
         $data = array(
             'name' => 'zhangjiayi'
@@ -20,5 +16,17 @@ class StaticAction extends Action {
         //
         $content = $this -> fetch('loginAjax.html', false);
         echo $content;
+    }
+
+    public function test () {
+        echo 'test page';
+    }
+
+    public function index () {
+        echo 'index page';
+    }
+
+    public function home () {
+        echo 'home page';
     }
 }
