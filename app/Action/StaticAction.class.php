@@ -27,6 +27,8 @@ class StaticAction extends Action {
     }
 
     public function home () {
-        echo 'home page';
+        //echo 'home page';
+        //
+         $this -> display('home.html');
     }
 }

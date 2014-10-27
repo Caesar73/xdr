@@ -1,0 +1,23 @@
+{{ block name="body" }}
+{{ strip }}
+
+    {{ $smarty.block.parent }}
+
+    {{ include file="common/siteNav.html" }}
+    {{ include file="common/main/common/header.html" }}
+    {{ include file="common/main/common/nav.html" }}
+
+    {{ block name="main" }}{{ /block }}
+
+    {{ include file="common/footer.html" }}
+
+
+    {{ $amd_more[] = 'common/main/component/category' }}
+
+    {{ include file="common/script.html" }}
+    {{ include file="common/component/im.html" }}
+
+    {{ block name="script" }}{{ /block }}
+
+{{ /strip }}
+{{ /block }}

@@ -1,1 +1,23 @@
-home page
+{{ *
+
+@file home page
+@author caesar
+
+* }}
+{{ extends file="../common/base.html" }}
+
+{{ block name="style" }}
+<!--  -->
+<link rel="stylesheet" href="{{ $static_origin }}/dist/css/home.css">
+
+{{ /block }}
+
+{{ block name="body" }}
+
+<div class="income">
+    <div class="expect">
+        <label>未消耗课时金额:</label>
+    </div>
+</div>
+
+{{ /block }}
