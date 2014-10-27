@@ -9,11 +9,11 @@
 // +----------------------------------------------------------------------
 class Http
 {
-	public static $debug = false;
-	
+    public static $debug = false;
+
     /**
      * 发起一个HTTP/HTTPS的请求
-     * @param $url 接口的URL 
+     * @param $url 接口的URL
      * @param $params 接口参数   array('content'=>'test', 'format'=>'json');
      * @param $extheaders 扩展的包头信息
      * @param $method 请求类型    GET|POST
@@ -80,10 +80,10 @@ class Http
         }
         curl_setopt($ci, CURLINFO_HEADER_OUT, TRUE );
         curl_setopt($ci, CURLOPT_URL, $url);
-		if(Http::$debug){
-		    $log = array("请求URL"=>$url,"header"=>$headers);
-			dump($log);
-		}
+        if(Http::$debug){
+            $log = array("请求URL"=>$url,"header"=>$headers);
+            dump($log);
+        }
         if($headers)
         {
             curl_setopt($ci, CURLOPT_HTTPHEADER, $headers );

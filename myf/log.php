@@ -1,10 +1,10 @@
 <?php
 /**
- * 
+ *
  */
 class Log{
-	
-	const EMERG   = 'EMERG';  // 严重错误: 导致系统崩溃无法使用
+
+    const EMERG   = 'EMERG';  // 严重错误: 导致系统崩溃无法使用
     const ALERT    = 'ALERT';  // 警戒性错误: 必须被立即修改的错误
     const CRIT      = 'CRIT';  // 临界值错误: 超过临界值的错误，例如一天24小时，而输入的是25小时这样
     const ERR       = 'ERR';  // 一般错误: 一般性错误
@@ -25,23 +25,18 @@ class Log{
 
     // 日期格式
     static $format =  '[ c ]';
-    
+
     static $log_level = "EMERG,ALERT,CRIT,ERR,WARN,NOTIC,INFO,DEBUG,SQL";
-    
+
     static $log_size = 2097152;
       /**
-     +----------------------------------------------------------
      * 记录日志 并且会过滤未经设置的级别
-     +----------------------------------------------------------
      * @static
      * @access public
-     +----------------------------------------------------------
      * @param string $message 日志信息
      * @param string $level  日志级别
      * @param boolean $record  是否强制记录
-     +----------------------------------------------------------
      * @return void
-     +----------------------------------------------------------
      */
     static function record($message,$level=self::ERR,$record=false) {
         if($record || strpos(self::$log_level,$level)) {
@@ -51,18 +46,13 @@ class Log{
     }
 
     /**
-     +----------------------------------------------------------
      * 日志保存
-     +----------------------------------------------------------
      * @static
      * @access public
-     +----------------------------------------------------------
      * @param integer $type 日志记录方式
      * @param string $destination  写入目标
      * @param string $extra 额外参数
-     +----------------------------------------------------------
      * @return void
-     +----------------------------------------------------------
      */
     static function save($type=self::FILE,$destination='',$extra='') {
         if(empty($destination))
@@ -79,20 +69,15 @@ class Log{
     }
 
     /**
-     +----------------------------------------------------------
      * 日志直接写入
-     +----------------------------------------------------------
      * @static
      * @access public
-     +----------------------------------------------------------
      * @param string $message 日志信息
      * @param string $level  日志级别
      * @param integer $type 日志记录方式
      * @param string $destination  写入目标
      * @param string $extra 额外参数
-     +----------------------------------------------------------
      * @return void
-     +----------------------------------------------------------
      */
     static function write($message,$level=self::DEBUG,$type=self::FILE,$destination='',$extra='') {
         $now = date(self::$format);
@@ -106,5 +91,5 @@ class Log{
         error_log("{$now} {$level}: {$message}\r\n", $type,$destination,$extra );
         //clearstatcache();
     }
-    
+
 }

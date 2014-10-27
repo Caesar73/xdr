@@ -108,15 +108,15 @@ class Action{
 		$this->tpl->display("msg.html");
 	}
 
-	/**
+    /**
      *
      */
-	public function __call($method, $args){
-	    // $abc = json_encode($_SERVER);
+    public function __call($method, $args){
+        // $abc = json_encode($_SERVER);
         // Log::write("NoPage log infos=".$abc);
-		//header("Location:".getBaseURL()."/404.html");
-		echo "error url 404";
-	}
+        //header("Location:".getBaseURL()."/404.html");
+        echo "error url 404";
+    }
 
 }
 
