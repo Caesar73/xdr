@@ -1,18 +1,26 @@
+{{ *
+
+@file blog page
+@author caesar
+
+* }}
+
+{{ extends file="./base.html" }}
+
 {{ block name="body" }}
 {{ strip }}
 
     {{ $smarty.block.parent }}
 
-    {{ include file="common/common/header.html" }}
-    {{ include file="common/common/nav.html" }}
+    {{ include file="./header.html" }}
+    {{ include file="./nav.html" }}
 
     {{ block name="main" }}{{ /block }}
 
-    {{ include file="common/footer.html" }}
+    {{ include file="./footer.html" }}
 
 
-    {{ include file="common/script.html" }}
-    {{ include file="common/component/im.html" }}
+    {{ include file="./script.html" }}
 
     {{ block name="script" }}{{ /block }}
 
