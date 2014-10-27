@@ -1,0 +1,14 @@
+/cache
+/runtime
+test
+/output
+/.idea
+build.sh
+*.bat
+*.psd
+npm-debug.log
+router.sublime-project
+router.sublime-workspace
+output.zip
+.DS_Store
+.swp
