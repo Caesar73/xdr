@@ -1,13 +1,9 @@
 <?php
 
-class StaticAction extends Action {
-
-    public function login () {
-        $this -> display('login.html');
-    }
+class HomeAction extends Action {
 
     public function index () {
-        $this -> display('home.html');
+        $this -> display('login.html');
     }
 
     public function loginAjax () {
