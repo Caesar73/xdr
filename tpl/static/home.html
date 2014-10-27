@@ -14,6 +14,44 @@
 {{ /block }}
 
 {{ block name="main" }}
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+<div class="carousel-inner track">
+    <div class="item active">
+        <img src="http://sijiao.533a1b45115f9.d01.nanoyun.com/img/track/track04.jpg" alt="">
+        <div class="container">
+            <div class="carousel-caption fr">
+                <h1 class="text-right">世界属于我们！80s & 90s--翳</h1>
+                <p class="lead text-right">The world belongs to 80s & 90s!</p>
+                <!--<p class="btn btn-large btn-primary fr" href="#">Learn more</p>-->
+            </div>
+    </div>
+    </div>
+    <div class="item">
+        <img src="http://sijiao.533a1b45115f9.d01.nanoyun.com/img/track/track09.jpg" alt="">
+        <div class="container">
+            <div class="carousel-caption">
+                <h1 class="text-right">飞翔，才能看到更美的世界--翳</h1>
+                <p class="lead text-right">To fly,you will see the beatiful world!</p>
+                <!--<p class="btn btn-large btn-primary fr" href="#">Learn more</p>-->
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <img src="http://sijiao.533a1b45115f9.d01.nanoyun.com/img/track/track06.jpg" alt="">
+        <div class="container">
+            <div class="carousel-caption">
+                <h1 class="text-right">世界的角落，隐藏着真正的英雄--翳</h1>
+                <p class="lead text-right">In the nook,there have true heros!</p>
+                <!--<p class="btn btn-large btn-primary fr" href="#">Learn more</p>-->
+            </div>
+        </div>
+    </div>
+</div>
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div><!-- /.carousel -->
 
 <div id="main" class="main">
     <div class="content">
@@ -21,4 +59,17 @@
     </div>
 </div>
 
+{{ /block }}
+
+{{ block name="script" }}
+<script>
+$(document).ready(function (){
+    //$("#mysmooth").scrollTo(700);
+    $('.carousel').carousel({
+        interval: 7000,
+        pause: ""
+    })
+
+});
+</script>
 {{ /block }}
